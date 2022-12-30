@@ -253,22 +253,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../node-groups/" class="md-nav__link">
+        Node Groups
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5">
           IAM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="IAM" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           IAM
         </label>
@@ -320,18 +335,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Modules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Modules" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Modules
         </label>
@@ -370,18 +385,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Add-ons
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Add-ons" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Add-ons
         </label>
@@ -574,6 +589,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#irsa-is-too-long" class="md-nav__link">
+    IRSA is too long
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -722,6 +744,20 @@
     <li class="md-nav__item">
       <a href="../cluster-proportional-autoscaler/" class="md-nav__link">
         Horizontal cluster-proportional-autoscaler container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consul/" class="md-nav__link">
+        Consul
       </a>
     </li>
   
@@ -1154,6 +1190,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../thanos/" class="md-nav__link">
+        Thanos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../traefik/" class="md-nav__link">
         Traefik
       </a>
@@ -1235,18 +1285,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -1405,6 +1455,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#irsa-is-too-long" class="md-nav__link">
+    IRSA is too long
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1464,6 +1521,13 @@ aws-load-balancer-controller                               <span class="m">2</sp
   enable             = true
   serviceAccountName = &quot;&lt;service_account&gt;&quot;
 }
+</code></pre></div>
+<h3 id="irsa-is-too-long">IRSA is too long<a class="headerlink" href="#irsa-is-too-long" title="Permanent link">&para;</a></h3>
+<p>If the IAM role is too long, override the service account name in the <code>helm_config</code> to create a shorter role name.</p>
+<div class="highlight"><pre><span></span><code>  enable_aws_load_balancer_controller = true
+  aws_load_balancer_controller_helm_config = {
+    service_account = &quot;aws-lb-sa&quot;
+  }
 </code></pre></div>
 
               
